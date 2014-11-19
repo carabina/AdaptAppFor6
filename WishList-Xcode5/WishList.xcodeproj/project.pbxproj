@@ -15,13 +15,24 @@
 		91AAABBA1A1D0CFD0079861B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AAABB91A1D0CFD0079861B /* AppDelegate.m */; };
 		91AAABBD1A1D0CFD0079861B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91AAABBB1A1D0CFD0079861B /* Main_iPhone.storyboard */; };
 		91AAABC01A1D0CFD0079861B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91AAABBE1A1D0CFD0079861B /* Main_iPad.storyboard */; };
-		91AAABC31A1D0CFD0079861B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AAABC21A1D0CFD0079861B /* ViewController.m */; };
 		91AAABC51A1D0CFD0079861B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91AAABC41A1D0CFD0079861B /* Images.xcassets */; };
 		91AAABCC1A1D0CFD0079861B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91AAABCB1A1D0CFD0079861B /* XCTest.framework */; };
 		91AAABCD1A1D0CFD0079861B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91AAABA91A1D0CFD0079861B /* Foundation.framework */; };
 		91AAABCE1A1D0CFD0079861B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91AAABAD1A1D0CFD0079861B /* UIKit.framework */; };
 		91AAABD61A1D0CFD0079861B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91AAABD41A1D0CFD0079861B /* InfoPlist.strings */; };
 		91AAABD81A1D0CFD0079861B /* WishListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AAABD71A1D0CFD0079861B /* WishListTests.m */; };
+		91FD4D0F1A1D0FED0089DDE4 /* WishListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FD4D0E1A1D0FED0089DDE4 /* WishListItem.m */; };
+		91FD4D121A1D0FF90089DDE4 /* UIViewController+PropertyInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FD4D111A1D0FF90089DDE4 /* UIViewController+PropertyInjector.m */; };
+		91FD4D151A1D10030089DDE4 /* WishListItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FD4D141A1D10030089DDE4 /* WishListItemCell.m */; };
+		91FD4D181A1D100D0089DDE4 /* WishListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FD4D171A1D100D0089DDE4 /* WishListTableViewController.m */; };
+		91FD4D1D1A1D10970089DDE4 /* imac5k.png in Resources */ = {isa = PBXBuildFile; fileRef = 91FD4D191A1D10970089DDE4 /* imac5k.png */; };
+		91FD4D1E1A1D10970089DDE4 /* ipadair2.png in Resources */ = {isa = PBXBuildFile; fileRef = 91FD4D1A1A1D10970089DDE4 /* ipadair2.png */; };
+		91FD4D1F1A1D10970089DDE4 /* minicooper.png in Resources */ = {isa = PBXBuildFile; fileRef = 91FD4D1B1A1D10970089DDE4 /* minicooper.png */; };
+		91FD4D201A1D10970089DDE4 /* tesla.png in Resources */ = {isa = PBXBuildFile; fileRef = 91FD4D1C1A1D10970089DDE4 /* tesla.png */; };
+		91FD4D221A1D10A90089DDE4 /* applewatch.png in Resources */ = {isa = PBXBuildFile; fileRef = 91FD4D211A1D10A90089DDE4 /* applewatch.png */; };
+		91FD4D251A1D17D70089DDE4 /* WishListItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FD4D241A1D17D70089DDE4 /* WishListItemViewController.m */; };
+		91FD4D2B1A1D1C630089DDE4 /* WishListBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FD4D2A1A1D1C630089DDE4 /* WishListBrowserViewController.m */; };
+		91FD4D2E1A1D551B0089DDE4 /* LaunchImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FD4D2D1A1D551B0089DDE4 /* LaunchImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +58,31 @@
 		91AAABB91A1D0CFD0079861B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		91AAABBC1A1D0CFD0079861B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		91AAABBF1A1D0CFD0079861B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		91AAABC11A1D0CFD0079861B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		91AAABC21A1D0CFD0079861B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		91AAABC41A1D0CFD0079861B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		91AAABCA1A1D0CFD0079861B /* WishListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WishListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91AAABCB1A1D0CFD0079861B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		91AAABD31A1D0CFD0079861B /* WishListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WishListTests-Info.plist"; sourceTree = "<group>"; };
 		91AAABD51A1D0CFD0079861B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		91AAABD71A1D0CFD0079861B /* WishListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WishListTests.m; sourceTree = "<group>"; };
+		91FD4D0D1A1D0FED0089DDE4 /* WishListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishListItem.h; sourceTree = "<group>"; };
+		91FD4D0E1A1D0FED0089DDE4 /* WishListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishListItem.m; sourceTree = "<group>"; };
+		91FD4D101A1D0FF90089DDE4 /* UIViewController+PropertyInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PropertyInjector.h"; sourceTree = "<group>"; };
+		91FD4D111A1D0FF90089DDE4 /* UIViewController+PropertyInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PropertyInjector.m"; sourceTree = "<group>"; };
+		91FD4D131A1D10030089DDE4 /* WishListItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishListItemCell.h; sourceTree = "<group>"; };
+		91FD4D141A1D10030089DDE4 /* WishListItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishListItemCell.m; sourceTree = "<group>"; };
+		91FD4D161A1D100D0089DDE4 /* WishListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishListTableViewController.h; sourceTree = "<group>"; };
+		91FD4D171A1D100D0089DDE4 /* WishListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishListTableViewController.m; sourceTree = "<group>"; };
+		91FD4D191A1D10970089DDE4 /* imac5k.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imac5k.png; sourceTree = "<group>"; };
+		91FD4D1A1A1D10970089DDE4 /* ipadair2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipadair2.png; sourceTree = "<group>"; };
+		91FD4D1B1A1D10970089DDE4 /* minicooper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minicooper.png; sourceTree = "<group>"; };
+		91FD4D1C1A1D10970089DDE4 /* tesla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tesla.png; sourceTree = "<group>"; };
+		91FD4D211A1D10A90089DDE4 /* applewatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applewatch.png; sourceTree = "<group>"; };
+		91FD4D231A1D17D70089DDE4 /* WishListItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishListItemViewController.h; sourceTree = "<group>"; };
+		91FD4D241A1D17D70089DDE4 /* WishListItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishListItemViewController.m; sourceTree = "<group>"; };
+		91FD4D291A1D1C630089DDE4 /* WishListBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishListBrowserViewController.h; sourceTree = "<group>"; };
+		91FD4D2A1A1D1C630089DDE4 /* WishListBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishListBrowserViewController.m; sourceTree = "<group>"; };
+		91FD4D2C1A1D551B0089DDE4 /* LaunchImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchImageViewController.h; sourceTree = "<group>"; };
+		91FD4D2D1A1D551B0089DDE4 /* LaunchImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +146,22 @@
 				91AAABB91A1D0CFD0079861B /* AppDelegate.m */,
 				91AAABBB1A1D0CFD0079861B /* Main_iPhone.storyboard */,
 				91AAABBE1A1D0CFD0079861B /* Main_iPad.storyboard */,
-				91AAABC11A1D0CFD0079861B /* ViewController.h */,
-				91AAABC21A1D0CFD0079861B /* ViewController.m */,
+				91FD4D161A1D100D0089DDE4 /* WishListTableViewController.h */,
+				91FD4D171A1D100D0089DDE4 /* WishListTableViewController.m */,
+				91FD4D231A1D17D70089DDE4 /* WishListItemViewController.h */,
+				91FD4D241A1D17D70089DDE4 /* WishListItemViewController.m */,
+				91FD4D291A1D1C630089DDE4 /* WishListBrowserViewController.h */,
+				91FD4D2A1A1D1C630089DDE4 /* WishListBrowserViewController.m */,
+				91FD4D131A1D10030089DDE4 /* WishListItemCell.h */,
+				91FD4D141A1D10030089DDE4 /* WishListItemCell.m */,
+				91FD4D0D1A1D0FED0089DDE4 /* WishListItem.h */,
+				91FD4D0E1A1D0FED0089DDE4 /* WishListItem.m */,
+				91FD4D101A1D0FF90089DDE4 /* UIViewController+PropertyInjector.h */,
+				91FD4D111A1D0FF90089DDE4 /* UIViewController+PropertyInjector.m */,
 				91AAABC41A1D0CFD0079861B /* Images.xcassets */,
 				91AAABB01A1D0CFD0079861B /* Supporting Files */,
+				91FD4D2C1A1D551B0089DDE4 /* LaunchImageViewController.h */,
+				91FD4D2D1A1D551B0089DDE4 /* LaunchImageViewController.m */,
 			);
 			path = WishList;
 			sourceTree = "<group>";
@@ -129,6 +169,11 @@
 		91AAABB01A1D0CFD0079861B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				91FD4D211A1D10A90089DDE4 /* applewatch.png */,
+				91FD4D191A1D10970089DDE4 /* imac5k.png */,
+				91FD4D1A1A1D10970089DDE4 /* ipadair2.png */,
+				91FD4D1B1A1D10970089DDE4 /* minicooper.png */,
+				91FD4D1C1A1D10970089DDE4 /* tesla.png */,
 				91AAABB11A1D0CFD0079861B /* WishList-Info.plist */,
 				91AAABB21A1D0CFD0079861B /* InfoPlist.strings */,
 				91AAABB51A1D0CFD0079861B /* main.m */,
@@ -202,6 +247,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Bennett Smith";
 				TargetAttributes = {
+					91AAABA51A1D0CFD0079861B = {
+						DevelopmentTeam = 4CJY2L7YAX;
+					};
 					91AAABC91A1D0CFD0079861B = {
 						TestTargetID = 91AAABA51A1D0CFD0079861B;
 					};
@@ -231,10 +279,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91FD4D1F1A1D10970089DDE4 /* minicooper.png in Resources */,
+				91FD4D221A1D10A90089DDE4 /* applewatch.png in Resources */,
 				91AAABC01A1D0CFD0079861B /* Main_iPad.storyboard in Resources */,
+				91FD4D1D1A1D10970089DDE4 /* imac5k.png in Resources */,
 				91AAABC51A1D0CFD0079861B /* Images.xcassets in Resources */,
 				91AAABBD1A1D0CFD0079861B /* Main_iPhone.storyboard in Resources */,
+				91FD4D201A1D10970089DDE4 /* tesla.png in Resources */,
 				91AAABB41A1D0CFD0079861B /* InfoPlist.strings in Resources */,
+				91FD4D1E1A1D10970089DDE4 /* ipadair2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,9 +306,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91AAABC31A1D0CFD0079861B /* ViewController.m in Sources */,
+				91FD4D121A1D0FF90089DDE4 /* UIViewController+PropertyInjector.m in Sources */,
 				91AAABBA1A1D0CFD0079861B /* AppDelegate.m in Sources */,
+				91FD4D251A1D17D70089DDE4 /* WishListItemViewController.m in Sources */,
+				91FD4D181A1D100D0089DDE4 /* WishListTableViewController.m in Sources */,
+				91FD4D2E1A1D551B0089DDE4 /* LaunchImageViewController.m in Sources */,
+				91FD4D2B1A1D1C630089DDE4 /* WishListBrowserViewController.m in Sources */,
 				91AAABB61A1D0CFD0079861B /* main.m in Sources */,
+				91FD4D0F1A1D0FED0089DDE4 /* WishListItem.m in Sources */,
+				91FD4D151A1D10030089DDE4 /* WishListItemCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WishList/WishList-Prefix.pch";
 				INFOPLIST_FILE = "WishList/WishList-Info.plist";
@@ -403,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WishList/WishList-Prefix.pch";
 				INFOPLIST_FILE = "WishList/WishList-Info.plist";
@@ -470,6 +531,7 @@
 				91AAABDD1A1D0CFD0079861B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91AAABDE1A1D0CFD0079861B /* Build configuration list for PBXNativeTarget "WishListTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +540,7 @@
 				91AAABE01A1D0CFD0079861B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

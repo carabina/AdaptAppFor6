@@ -7,11 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import "WishListItem.h"
+#import "UIViewController+PropertyInjector.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    WishListItem *tesla = [[WishListItem alloc] initWithTitle:@"Tesla Model S" url:[NSURL URLWithString:@"http://www.teslamotors.com/models"] image:[UIImage imageNamed:@"tesla"]];
+    WishListItem *minicooper = [[WishListItem alloc] initWithTitle:@"Mini Cooper Countryman" url:[NSURL URLWithString:@"http://www.miniusa.com/content/miniusa/en/model/countryman.html"] image:[UIImage imageNamed:@"minicooper"]];
+    WishListItem *ipadair2 = [[WishListItem alloc] initWithTitle:@"iPadAir 2" url:[NSURL URLWithString:@"http://www.apple.com/ipad-air-2/"] image:[UIImage imageNamed:@"ipadair2"]];
+    WishListItem *imac5k = [[WishListItem alloc] initWithTitle:@"iMac with Retina 5K display" url:[NSURL URLWithString:@"http://www.apple.com/imac-with-retina/"] image:[UIImage imageNamed:@"imac5k"]];
+    WishListItem *applewatch = [[WishListItem alloc] initWithTitle:@" Watch" url:[NSURL URLWithString:@"http://www.apple.com/watch/"] image:[UIImage imageNamed:@"applewatch"]];
+    
+    NSMutableArray *wishListItems = [NSMutableArray arrayWithArray:@[tesla, minicooper, ipadair2, imac5k, applewatch]];
+    
+    UIViewController *rootViewController = self.window.rootViewController;
+    
+    [rootViewController injectValue:wishListItems forKey:@"wishListItems"];
+    
     // Override point for customization after application launch.
     return YES;
 }

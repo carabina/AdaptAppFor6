@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LaunchImageViewController.h
 //  WishList
 //
 //  Created by Bennett Smith on 11/19/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface LaunchImageViewController : UIViewController
 
 @end
