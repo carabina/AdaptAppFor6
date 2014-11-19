@@ -1,3 +1,8 @@
+AdaptAppFor6
+============
+
+Adapting Existing Apps for iPhone 6 and 6 Plus
+
 Apple says that existing iOS apps will "just work" on iPhone 6 and 6+ devices. 
 This is accomplished by scaling the existing user interfaces to the new device 
 dimensions. If you want your apps to take full advantage of the larger screens 
