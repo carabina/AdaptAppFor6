@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91A894961A1D632D00BC5F80 /* Launch_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91A894951A1D632D00BC5F80 /* Launch_iPhone.storyboard */; };
+		91A894981A1D639C00BC5F80 /* Launch_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91A894971A1D639C00BC5F80 /* Launch_iPad.storyboard */; };
 		91AAABAA1A1D0CFD0079861B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91AAABA91A1D0CFD0079861B /* Foundation.framework */; };
 		91AAABAC1A1D0CFD0079861B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91AAABAB1A1D0CFD0079861B /* CoreGraphics.framework */; };
 		91AAABAE1A1D0CFD0079861B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91AAABAD1A1D0CFD0079861B /* UIKit.framework */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		91A894951A1D632D00BC5F80 /* Launch_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch_iPhone.storyboard; sourceTree = "<group>"; };
+		91A894971A1D639C00BC5F80 /* Launch_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch_iPad.storyboard; sourceTree = "<group>"; };
 		91AAABA61A1D0CFD0079861B /* WishList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WishList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91AAABA91A1D0CFD0079861B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		91AAABAB1A1D0CFD0079861B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -146,6 +150,8 @@
 				91AAABB91A1D0CFD0079861B /* AppDelegate.m */,
 				91AAABBB1A1D0CFD0079861B /* Main_iPhone.storyboard */,
 				91AAABBE1A1D0CFD0079861B /* Main_iPad.storyboard */,
+				91A894951A1D632D00BC5F80 /* Launch_iPhone.storyboard */,
+				91A894971A1D639C00BC5F80 /* Launch_iPad.storyboard */,
 				91FD4D161A1D100D0089DDE4 /* WishListTableViewController.h */,
 				91FD4D171A1D100D0089DDE4 /* WishListTableViewController.m */,
 				91FD4D231A1D17D70089DDE4 /* WishListItemViewController.h */,
@@ -158,10 +164,10 @@
 				91FD4D0E1A1D0FED0089DDE4 /* WishListItem.m */,
 				91FD4D101A1D0FF90089DDE4 /* UIViewController+PropertyInjector.h */,
 				91FD4D111A1D0FF90089DDE4 /* UIViewController+PropertyInjector.m */,
-				91AAABC41A1D0CFD0079861B /* Images.xcassets */,
-				91AAABB01A1D0CFD0079861B /* Supporting Files */,
 				91FD4D2C1A1D551B0089DDE4 /* LaunchImageViewController.h */,
 				91FD4D2D1A1D551B0089DDE4 /* LaunchImageViewController.m */,
+				91AAABC41A1D0CFD0079861B /* Images.xcassets */,
+				91AAABB01A1D0CFD0079861B /* Supporting Files */,
 			);
 			path = WishList;
 			sourceTree = "<group>";
@@ -281,10 +287,12 @@
 			files = (
 				91FD4D1F1A1D10970089DDE4 /* minicooper.png in Resources */,
 				91FD4D221A1D10A90089DDE4 /* applewatch.png in Resources */,
+				91A894981A1D639C00BC5F80 /* Launch_iPad.storyboard in Resources */,
 				91AAABC01A1D0CFD0079861B /* Main_iPad.storyboard in Resources */,
 				91FD4D1D1A1D10970089DDE4 /* imac5k.png in Resources */,
 				91AAABC51A1D0CFD0079861B /* Images.xcassets in Resources */,
 				91AAABBD1A1D0CFD0079861B /* Main_iPhone.storyboard in Resources */,
+				91A894961A1D632D00BC5F80 /* Launch_iPhone.storyboard in Resources */,
 				91FD4D201A1D10970089DDE4 /* tesla.png in Resources */,
 				91AAABB41A1D0CFD0079861B /* InfoPlist.strings in Resources */,
 				91FD4D1E1A1D10970089DDE4 /* ipadair2.png in Resources */,

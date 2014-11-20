@@ -16,6 +16,7 @@
         _title = [title copy];
         _url = [url copy];
         _image = [image copy];
+        _favorite = NO;
     }
     return self;
 }

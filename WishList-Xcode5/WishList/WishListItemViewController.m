@@ -13,9 +13,12 @@
 @property (weak, nonatomic) IBOutlet UIImageView *wishListImage;
 @property (weak, nonatomic) IBOutlet UILabel *wishListTitle;
 @property (weak, nonatomic) IBOutlet UILabel *wishListURL;
+@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 @property (strong, nonatomic) NSDictionary *viewsDictionary;
 @property (strong, nonatomic) NSArray *portraitConstraints;
 @property (strong, nonatomic) NSArray *landscapeConstraints;
+@property (strong, nonatomic) UIImage *favoriteImage;
+@property (strong, nonatomic) UIImage *notFavoriteImage;
 @end
 
 @implementation WishListItemViewController
@@ -34,6 +37,16 @@
     
     self.portraitConstraints = [self makePortraitConstraints];
     self.landscapeConstraints = [self makeLandscapeConstraints];
+    
+    UIImage *favorite = [UIImage imageNamed:@"Favorite"];
+    self.favoriteImage = [favorite imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    
+    UIImage *notFavorite = [UIImage imageNamed:@"NotFavorite"];
+    self.notFavoriteImage = [notFavorite imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+
+    [self.favoriteButton setTintColor:[UIColor redColor]];
+    
+    [self updateFavoriteButton];
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
@@ -57,6 +70,28 @@
     }
 }
 
+- (void)updateFavoriteButton {
+    if (self.wishListItem.isFavorite == YES) {
+        [self.favoriteButton setImage:self.favoriteImage forState:UIControlStateNormal];
+        [self.favoriteButton setImage:self.favoriteImage forState:UIControlStateHighlighted];
+        [self.favoriteButton setImage:self.notFavoriteImage forState:UIControlStateSelected];
+    }
+    else {
+        [self.favoriteButton setImage:self.notFavoriteImage forState:UIControlStateNormal];
+        [self.favoriteButton setImage:self.notFavoriteImage forState:UIControlStateHighlighted];
+        [self.favoriteButton setImage:self.favoriteImage forState:UIControlStateSelected];
+    }
+}
+
+- (IBAction)toggleFavorite:(id)sender {
+    self.wishListItem.favorite = (self.wishListItem.isFavorite == YES ? NO : YES);
+    [self updateFavoriteButton];
+}
+
+// *****************************************************************************
+#pragma mark -                                                Constraint Helpers
+// *****************************************************************************
+
 - (NSArray *)makePortraitConstraints {
     NSArray *imageH = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[wishListImage]-|"
                                                               options:0
@@ -67,14 +102,28 @@
                                                               metrics:nil
                                                                 views:self.viewsDictionary];
     
+    /* Enforce a 4:3 aspect ratio for the image. */
+    CGFloat standardSpacing = 20.0f;
+    CGFloat computedHeight = ([self.view bounds].size.width / (4.0 / 3.0)) - (2 * standardSpacing);
+    
     NSLayoutConstraint *imageHeightConstraint = [NSLayoutConstraint constraintWithItem:self.wishListImage
                                                                              attribute:NSLayoutAttributeHeight
                                                                              relatedBy:NSLayoutRelationEqual
                                                                                 toItem:nil
                                                                              attribute:NSLayoutAttributeNotAnAttribute
                                                                             multiplier:1.0f
-                                                                              constant:210.0f];
+                                                                              constant:computedHeight];
     
+    NSArray *favoriteH = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[favorite]"
+                                                                 options:0
+                                                                 metrics:nil
+                                                                   views:self.viewsDictionary];
+    
+    NSArray *favoriteV = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[favorite]-|"
+                                                                 options:0
+                                                                 metrics:nil
+                                                                   views:self.viewsDictionary];
+
     NSArray *titleH = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[wishListTitle]-|"
                                                               options:0
                                                               metrics:nil
@@ -97,6 +146,8 @@
     [constraints addObjectsFromArray:imageH];
     [constraints addObjectsFromArray:imageV];
     [constraints addObject:imageHeightConstraint];
+    [constraints addObjectsFromArray:favoriteH];
+    [constraints addObjectsFromArray:favoriteV];
     [constraints addObjectsFromArray:titleH];
     [constraints addObjectsFromArray:titleV];
     [constraints addObjectsFromArray:urlH];
@@ -113,6 +164,16 @@
                                                               options:0
                                                               metrics:nil
                                                                 views:self.viewsDictionary];
+    
+    NSArray *favoriteH = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[favorite]"
+                                                                 options:0
+                                                                 metrics:nil
+                                                                   views:self.viewsDictionary];
+    
+    NSArray *favoriteV = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[favorite]-|"
+                                                                 options:0
+                                                                 metrics:nil
+                                                                   views:self.viewsDictionary];
     
     NSLayoutConstraint *wishListTitleWidth = [NSLayoutConstraint constraintWithItem:self.wishListTitle
                                                                           attribute:NSLayoutAttributeWidth
@@ -133,6 +194,8 @@
     NSMutableArray *constraints = [NSMutableArray array];
     [constraints addObjectsFromArray:imageH];
     [constraints addObjectsFromArray:imageV];
+    [constraints addObjectsFromArray:favoriteH];
+    [constraints addObjectsFromArray:favoriteV];
     [constraints addObject:wishListTitleWidth];
     [constraints addObject:wishListURLWidth];
     return [NSArray arrayWithArray:constraints];
@@ -143,7 +206,8 @@
               @"topLayoutGuide": self.topLayoutGuide,
               @"wishListImage": self.wishListImage,
               @"wishListTitle": self.wishListTitle,
-              @"wishListURL": self.wishListURL
+              @"wishListURL": self.wishListURL,
+              @"favorite": self.favoriteButton
               };
 }
 

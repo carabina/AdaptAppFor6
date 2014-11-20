@@ -5,35 +5,6 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - Wish List-->
-        <scene sceneID="YIW-qX-PKP">
-            <objects>
-                <tableViewController id="RxA-yt-cjQ" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="soP-Wc-Pg4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="HBa-HV-7fm">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HBa-HV-7fm" id="YMJ-R1-s9f">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="RxA-yt-cjQ" id="Aeo-c7-ZH7"/>
-                            <outlet property="delegate" destination="RxA-yt-cjQ" id="tuO-j7-Voz"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Wish List" id="hEp-Ry-1UW"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b92-Ab-k2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="346" y="235"/>
-        </scene>
         <!--Wish List Table View Controller - Wish List-->
         <scene sceneID="yMD-nn-F2c">
             <objects>
@@ -101,7 +72,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zev-d0-m6q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1577" y="235"/>
+            <point key="canvasLocation" x="815" y="103"/>
         </scene>
         <!--Wish List Item View Controller - Info-->
         <scene sceneID="Uf2-rS-GB5">
@@ -134,6 +105,16 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEZ-bW-rba">
+                                <rect key="frame" x="20" y="523" width="28" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="NotFavorite">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleFavorite:" destination="CvZ-RI-CcK" eventType="touchUpInside" id="so9-7R-SFu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -144,10 +125,13 @@
                             <constraint firstItem="f4j-qf-ybl" firstAttribute="leading" secondItem="MMz-tK-tFf" secondAttribute="leading" constant="20" symbolic="YES" placeholder="YES" id="KlV-Wg-eAv"/>
                             <constraint firstItem="tg8-pU-qSO" firstAttribute="top" secondItem="jO7-Rx-RQN" secondAttribute="bottom" constant="23" placeholder="YES" id="LFm-1J-ir7"/>
                             <constraint firstItem="f4j-qf-ybl" firstAttribute="top" secondItem="7VS-Sj-cZa" secondAttribute="bottom" constant="16" placeholder="YES" id="McQ-xj-GkM"/>
+                            <constraint firstItem="AEZ-bW-rba" firstAttribute="leading" secondItem="MMz-tK-tFf" secondAttribute="leading" constant="20" placeholder="YES" id="c4z-IF-396"/>
+                            <constraint firstItem="7CC-nS-Kk4" firstAttribute="top" secondItem="AEZ-bW-rba" secondAttribute="bottom" constant="20" placeholder="YES" id="pis-9L-iNR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Info" id="tzy-Es-o7J"/>
                     <connections>
+                        <outlet property="favoriteButton" destination="AEZ-bW-rba" id="ucL-js-SYv"/>
                         <outlet property="wishListImage" destination="f4j-qf-ybl" id="MKE-Zr-nWo"/>
                         <outlet property="wishListTitle" destination="jO7-Rx-RQN" id="tkF-2M-y1h"/>
                         <outlet property="wishListURL" destination="tg8-pU-qSO" id="eNG-Q0-dWp"/>
@@ -155,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qW5-k5-rkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2285" y="-312"/>
+            <point key="canvasLocation" x="1523" y="-444"/>
         </scene>
         <!--Wish List Browser View Controller - Buy Me!-->
         <scene sceneID="tts-I1-YSQ">
@@ -190,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7DD-OP-dUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2285" y="606"/>
+            <point key="canvasLocation" x="1523" y="474"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NCj-aU-58J">
@@ -208,31 +192,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdc-tG-hPR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1010" y="235"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Yrr-A8-KGX">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jb5-VX-z0s" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f3T-8I-h9Z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Jhg-CP-OGc">
-                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="RxA-yt-cjQ" kind="relationship" relationship="rootViewController" id="v1y-fk-1xa"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IH6-vO-toW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-180" y="235"/>
+            <point key="canvasLocation" x="248" y="103"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NotFavorite" width="28" height="25"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
