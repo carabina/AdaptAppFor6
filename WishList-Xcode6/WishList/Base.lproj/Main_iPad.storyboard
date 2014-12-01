@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="ART-Np-wVb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Wish List Table View Controller - Wish List-->
+        <scene sceneID="M51-sO-8hl">
+            <objects>
+                <tableViewController id="TcS-IF-tA9" customClass="WishListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="TnP-Bc-x3Z">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WishListItem" rowHeight="100" id="vbv-Ib-oA1" customClass="WishListItemCell">
+                                <rect key="frame" x="0.0" y="86" width="768" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vbv-Ib-oA1" id="WDX-Me-uf0">
+                                    <rect key="frame" x="0.0" y="0.0" width="701" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yR8-QV-z2V">
+                                            <rect key="frame" x="20" y="4" width="25" height="92"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="92" id="HhR-xc-bpf"/>
+                                                <constraint firstAttribute="width" secondItem="yR8-QV-z2V" secondAttribute="height" multiplier="1:1" id="RAb-0h-GlS"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwr-tO-648">
+                                            <rect key="frame" x="120" y="20" width="41" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruw-Qq-Hf6">
+                                            <rect key="frame" x="120" y="58" width="31" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="yR8-QV-z2V" secondAttribute="centerY" constant="-0.5" id="0Vk-9X-FiB"/>
+                                        <constraint firstAttribute="centerY" secondItem="ruw-Qq-Hf6" secondAttribute="centerY" constant="-16" id="AXg-9W-T7r"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fwr-tO-648" secondAttribute="trailing" constant="20" symbolic="YES" id="Jby-wS-j7N"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ruw-Qq-Hf6" secondAttribute="trailing" constant="20" symbolic="YES" id="TGd-dc-6SK"/>
+                                        <constraint firstAttribute="centerY" secondItem="Fwr-tO-648" secondAttribute="centerY" constant="19.5" id="TyS-9x-bv7"/>
+                                        <constraint firstItem="yR8-QV-z2V" firstAttribute="leading" secondItem="WDX-Me-uf0" secondAttribute="leading" constant="20" id="WZc-Mx-Bv3"/>
+                                        <constraint firstItem="Fwr-tO-648" firstAttribute="leading" secondItem="yR8-QV-z2V" secondAttribute="trailing" constant="8" id="ZGW-LU-bDN"/>
+                                        <constraint firstItem="ruw-Qq-Hf6" firstAttribute="leading" secondItem="Fwr-tO-648" secondAttribute="leading" id="xEo-6M-Lb5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="wishListImage" destination="yR8-QV-z2V" id="OpD-2I-0MJ"/>
+                                    <outlet property="wishListTitle" destination="Fwr-tO-648" id="gA4-pj-2ri"/>
+                                    <outlet property="wishListURL" destination="ruw-Qq-Hf6" id="edh-h0-Mfh"/>
+                                    <segue destination="wJe-Au-JAk" kind="push" identifier="viewWishListItem" trigger="accessoryAction" id="QJ8-WK-eQH"/>
+                                    <segue destination="Jp0-Gp-iXQ" kind="push" identifier="browseWishListItemSite" id="dig-0t-fib"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TcS-IF-tA9" id="KNN-OR-cc3"/>
+                            <outlet property="delegate" destination="TcS-IF-tA9" id="FvV-nP-aan"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Wish List" id="5YS-h3-0DG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ReN-Ls-Un5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2627" y="190"/>
+        </scene>
+        <!--Wish List Item View Controller - Info-->
+        <scene sceneID="OJi-xh-qfT">
+            <objects>
+                <viewController id="wJe-Au-JAk" customClass="WishListItemViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pVl-k1-3Zc"/>
+                        <viewControllerLayoutGuide type="bottom" id="1i2-WT-f8z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z7h-Gn-gQN">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lHU-HD-D2o">
+                                <rect key="frame" x="20" y="79" width="728" height="525"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gct-3d-Nf5">
+                                <rect key="frame" x="20" y="627" width="41" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lx-ed-Ynu">
+                                <rect key="frame" x="20" y="668" width="31" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlS-IF-igL">
+                                <rect key="frame" x="20" y="974" width="28" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="NotFavorite">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleFavorite:" destination="wJe-Au-JAk" eventType="touchUpInside" id="058-9X-UJl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lHU-HD-D2o" firstAttribute="top" secondItem="pVl-k1-3Zc" secondAttribute="bottom" constant="15" placeholder="YES" id="6bC-ac-nNq"/>
+                            <constraint firstItem="Gct-3d-Nf5" firstAttribute="top" secondItem="lHU-HD-D2o" secondAttribute="bottom" constant="23" placeholder="YES" id="LV0-1g-g25"/>
+                            <constraint firstItem="8lx-ed-Ynu" firstAttribute="top" secondItem="Gct-3d-Nf5" secondAttribute="bottom" constant="21" placeholder="YES" id="Lxd-ps-HYh"/>
+                            <constraint firstAttribute="trailing" secondItem="lHU-HD-D2o" secondAttribute="trailing" constant="20" symbolic="YES" placeholder="YES" id="PVh-CW-2JX"/>
+                            <constraint firstItem="zlS-IF-igL" firstAttribute="leading" secondItem="z7h-Gn-gQN" secondAttribute="leading" constant="20" placeholder="YES" id="bm4-qH-MPe"/>
+                            <constraint firstItem="Gct-3d-Nf5" firstAttribute="leading" secondItem="8lx-ed-Ynu" secondAttribute="leading" placeholder="YES" id="dm1-sP-YE4"/>
+                            <constraint firstItem="lHU-HD-D2o" firstAttribute="leading" secondItem="z7h-Gn-gQN" secondAttribute="leading" constant="20" symbolic="YES" placeholder="YES" id="e7p-I6-Ter"/>
+                            <constraint firstItem="Gct-3d-Nf5" firstAttribute="leading" secondItem="lHU-HD-D2o" secondAttribute="leading" placeholder="YES" id="fMT-Ew-d5j"/>
+                            <constraint firstItem="1i2-WT-f8z" firstAttribute="top" secondItem="8lx-ed-Ynu" secondAttribute="bottom" constant="341" placeholder="YES" id="iOO-x3-2bQ"/>
+                            <constraint firstItem="1i2-WT-f8z" firstAttribute="top" secondItem="zlS-IF-igL" secondAttribute="bottom" constant="25" placeholder="YES" id="tgl-lM-dqu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Info" id="GSn-G1-JPM"/>
+                    <connections>
+                        <outlet property="favoriteButton" destination="zlS-IF-igL" id="a29-9f-rgt"/>
+                        <outlet property="wishListImage" destination="lHU-HD-D2o" id="Bjf-Jr-tEv"/>
+                        <outlet property="wishListTitle" destination="Gct-3d-Nf5" id="HkD-4S-gTs"/>
+                        <outlet property="wishListURL" destination="8lx-ed-Ynu" id="bDg-nr-H2T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oWW-Pz-Hpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4108" y="-499"/>
+        </scene>
+        <!--Wish List Browser View Controller - Buy Me!-->
+        <scene sceneID="QED-3u-q3U">
+            <objects>
+                <viewController id="Jp0-Gp-iXQ" customClass="WishListBrowserViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zou-97-lIm"/>
+                        <viewControllerLayoutGuide type="bottom" id="JA7-yA-bcS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZUU-kr-gIf">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView appearanceType="aqua" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqy-qx-nsC">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nqy-qx-nsC" firstAttribute="leading" secondItem="ZUU-kr-gIf" secondAttribute="leading" id="9wH-Rv-nN1"/>
+                            <constraint firstAttribute="bottom" secondItem="nqy-qx-nsC" secondAttribute="bottom" id="EAs-Se-NEb"/>
+                            <constraint firstItem="nqy-qx-nsC" firstAttribute="top" secondItem="ZUU-kr-gIf" secondAttribute="top" id="UGY-n9-Veo"/>
+                            <constraint firstAttribute="trailing" secondItem="nqy-qx-nsC" secondAttribute="trailing" id="gbs-d1-mvD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Buy Me!" id="rJl-Bg-qx4"/>
+                    <connections>
+                        <outlet property="webView" destination="nqy-qx-nsC" id="w3q-c1-9nk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9yZ-87-Ets" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4108" y="828"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VM9-pz-dAX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ART-Np-wVb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l3B-YS-JIv">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TcS-IF-tA9" kind="relationship" relationship="rootViewController" id="zxd-Ij-XKJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3P7-u9-HPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653" y="190"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NotFavorite" width="28" height="25"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
